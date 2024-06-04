@@ -35,10 +35,11 @@ public class TodoService implements TodoRepository {
 
     @Override
     public Todo addTodo(Todo todo) {
-        todo.setTodoId(uniqueId);
+        todo.setId(uniqueId);
         todoList.put(uniqueId, todo);
-        uniqueId += 1;
         
+        uniqueId += 1;
+
         return todo;
     }
 
